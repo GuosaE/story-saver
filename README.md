@@ -26,4 +26,3 @@ Things you may want to cover:
 =======
 # story-saver
 A Rails application for saving and organizing news stories.
->>>>>>> bfa25585a2f71e86051d290f92196b1d0eee4165
