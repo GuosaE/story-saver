@@ -1,0 +1,17 @@
+<div align="center"><h2><u>Countries</u></h2>
+
+<br>
+<div align="center"><%= link_to 'Add New Country', new_country_path %>
+<br>
+<%= link_to 'Back to Home', home_index_path %></div>
+<br>
+<% @countries.each do |country| %>
+    <p><strong>Country:</strong> <%= country.name %></p>  
+    <p><strong>Region:</strong> <%= country.region.name %></p>
+    <%= link_to 'Show', [country.region, country] %>
+    <br>
+    <%= link_to 'Edit', edit_region_country_path(country.region, country) %>
+    <br>
+    <%= link_to 'Delete', [country.region, country], method: :delete, data: { confirm: 'Are you sure you want to remove this country?' } %>
+    <br>
+<% end %></div>

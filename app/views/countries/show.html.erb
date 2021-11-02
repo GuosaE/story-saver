@@ -1,0 +1,19 @@
+<h2>Country Details</h2>
+
+<p><strong>Name:</strong> <%= @country.name %></p>
+<p><strong>Region:</strong> <%= @country.region.name %></p>
+<br>
+<p><strong>Associated News Articles:</strong></p>
+<% @articles.each do |article| %>
+    <% if article.country_id == @country.id %>
+        <p><strong>Title:</strong> <%= article.title %></p>
+        <p><strong>URL:</strong> <%= link_to article.url, "#{article.url}" %></p>
+        <br>
+        <br>
+        <br>
+    <% end %>
+<% end %>
+
+<br>
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'View other countries in the same region', region_countries_path(@country.region) %>
