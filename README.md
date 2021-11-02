@@ -1,27 +1,21 @@
-# README
+# Story Saver
+A Rails application for saving and organizing news stories and making notes about stories that users have read or plan to read. The application 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Installation
 
-Things you may want to cover:
+1. Clone this repo.
+2. Run "bundle install".
+3. Run "rails db:migrate".
+4. Run "rails s".
+5. Open your browser and navigate to localhost:3000 
+6. Create an account to login or sign in to the application with your GitHub account.
 
-* Ruby version
+# Contributing
 
-* System dependencies
+Story Saver encourages open and friendly collaboration on this project in accordance with the code of conduct of the <a href="https://www.contributor-covenant.org/version/2/0/code_of_conduct/">Contributor Covenant</a>.
 
-* Configuration
+# License
 
-* Database creation
+This application is available as open source under the terms of the <a href="http://opensource.org/licenses/MIT">MIT License</a>.
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# story-saver
-A Rails application for saving and organizing news stories.
