@@ -12,6 +12,6 @@
     <br>
     <%= link_to 'Edit', edit_region_country_path(country.region, country) %>
     <br>
-    <%= link_to 'Delete', [country.region, country], method: :delete, data: { confirm: 'Are you sure you want to remove this country?' } %>
+    <%= link_to 'Delete', country, method: :delete, data: { confirm: 'Are you sure you want to remove this country?' } %>
     <br>
 <% end %></div>
