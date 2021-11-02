@@ -1,0 +1,27 @@
+<div align="center"><table class=>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <br>
+      <th>Article Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sources.each do |source| %>
+      <tr>
+      <td style="text-align:center"><%= source.name %></td>
+      <td style="text-align:center">
+        <% @articles.each do |article| %>
+          <% if article.source_id == source.id %>
+              <%= article.title %>
+          <% end %>
+        <% end %>
+      </td>
+      </tr>
+    <% end %>
+  </tbody>
+
+    </tr>
+  </thead>
+</table>
