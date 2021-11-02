@@ -25,3 +25,11 @@
     </tr>
   </thead>
 </table>
+
+<br>
+<h3>Sources in Alphabetical Order:</h3>
+
+<% @sources.ordered_by_name.map do |source| %>
+    <%= source.name %>
+    <br>
+<% end %>
