@@ -1,0 +1,43 @@
+<div align="center"><h1><u>Notes</u></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Information</th> 
+      <th>Subject</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @notes.each do |note| %>
+      <tr>
+        <td><%= note.name %></td>
+        <td><%= note.information %></td>
+        <td> <% @subjects.each do |subject| %>
+          <% if subject.id == note.subject_id %>
+              <%= subject.name %>
+          <% end %>
+        <% end %></td>
+        <td> <% @categories.each do |category| %>
+          <% if category.id == note.category_id %>
+              <%= category.name %>
+          <% end %>
+        <% end %></td>
+        <td>
+          <ul>
+            <%= link_to 'Show', note %>
+            <%= link_to 'Edit', edit_note_path(note) %>
+            <%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure you want to delete this note?' } %>
+          </ul>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Note', new_note_path %></div> 

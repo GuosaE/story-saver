@@ -1,0 +1,33 @@
+<div align="center"><p>
+  <strong>Title:</strong>
+  <%= @note.name %>
+</p>
+<br>
+<br>
+<p>
+  <strong>Content:</strong>
+  <%= @note.information %>
+</p>
+<br>
+<br>
+<p>
+  <strong>Subject:</strong>
+  <% @subjects.each do |subject| %>
+    <% if subject.id == @note.subject_id %>
+        <%= subject.name %>
+    <% end %>
+  <% end %>
+</p>
+<br>
+<br>
+<p>
+  <strong>Category:</strong>
+  <% @categories.each do |category| %>
+    <% if category.id == @note.category_id %>
+      <%= category.name %>
+    <% end %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %></div>
