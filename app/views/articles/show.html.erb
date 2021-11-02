@@ -1,0 +1,47 @@
+<p>
+  <strong>Source:</strong>
+  <%= @article.source_name %>
+</p>
+
+<p>
+  <strong>Writer(s):</strong>
+  <%= @article.author %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<p>
+  <strong>URL:</strong>
+  <%= @article.url %>
+</p>
+
+<p>
+  <strong>Image URL:</strong>
+  <%= @article.urlToImage %>
+</p>
+
+<p>
+  <strong>Publication Date:</strong>
+  <%= @article.publishedAt %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @article.country.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @article.content %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
