@@ -1,0 +1,15 @@
+<div align="center"><h2><u>Article Previews</u></h2>
+<br>
+<br>
+    <% @articles.each do |article| %>
+            <%= image_tag(article.urlToImage, :size => "200x150", :crop => :fill) %>
+            <h3><%= article.title %></h3>
+            <h4><%= article.author %></h4>
+            <h4><%= article.source_name %></h4>
+            <p>
+                <%= truncate(article.description, length: 200) %>
+            </p>
+            <br>
+            <br>   
+    <% end %>
+</div>
