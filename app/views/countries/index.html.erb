@@ -1,10 +1,11 @@
-<div align="center"><h2><u>Countries</u></h2>
+<br>
+<br>
+<div align="center"><%= link_to 'Back to Home', home_index_path %>
+<br>
+<br>
 
-<br>
-<div align="center"><%= link_to 'Add New Country', new_country_path %>
-<br>
-<%= link_to 'Back to Home', home_index_path %></div>
-<br>
+<h2><u>Countries</u></h2>
+
 <% @countries.each do |country| %>
     <p><strong>Country:</strong> <%= country.name %></p>  
     <p><strong>Region:</strong> <%= country.region.name %></p>

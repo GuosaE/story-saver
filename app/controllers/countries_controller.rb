@@ -19,15 +19,7 @@ class CountriesController < ApplicationController
     end
 
     def new
-        if params[:region_id]
-            
-            @region = Region.find_by(id: params[:region_id])
-            # @country = @region.countries.new
-            # @country = Country.new(region_id: params[:region_id])
-            @country = Country.new(region: @region)
-        else
-            @country = Country.new
-        end
+        @country = Country.new(region_id: params[:region_id])
     end
 
     def edit
