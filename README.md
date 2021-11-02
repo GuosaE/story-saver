@@ -5,9 +5,9 @@ A Rails application for saving and organizing news stories and making notes abou
 
 1. Clone this repo.
 2. Run "bundle install".
-3. Run "rails db:migrate".
-4. Run "rails s".
-5. Open your browser and navigate to localhost:3000 
+3. Run "rails db:migrate" to create a database.
+4. Run "rails s" to start the server.
+5. Open your browser and go to localhost:3000 
 6. Create an account to login or sign in to the application with your GitHub account.
 
 # Contributing
