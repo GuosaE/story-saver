@@ -1,5 +1,5 @@
 # Story Saver
-A Rails application for saving and organizing news stories and making notes about stories that users have read or plan to read. The application 
+A Rails application for saving and organizing news stories and making notes about stories that users have read or plan to read.
 
 # Installation
 
