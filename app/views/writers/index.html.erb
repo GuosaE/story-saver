@@ -28,7 +28,7 @@
 <br>
 <h3>Writers in Alphabetical Order:</h3>
 
-<% @writers.ordered_by_name.map do |writer| %>
+<% @writers.ordered_by_name.each do |writer| %>
     <%= writer.name %>
     <br>
 <% end %>
