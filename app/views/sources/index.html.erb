@@ -8,7 +8,7 @@
   </thead>
 
   <tbody>
-    <% @sources.each do |source| %>
+    <% @sources.ordered_by_name.each do |source| %>
       <tr>
       <td style="text-align:center"><%= source.name %></td>
       <td style="text-align:center">
@@ -27,9 +27,4 @@
 </table>
 
 <br>
-<h3>Sources in Alphabetical Order:</h3>
 
-<% @sources.ordered_by_name.each do |source| %>
-    <%= source.name %>
-    <br>
-<% end %>

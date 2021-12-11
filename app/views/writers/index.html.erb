@@ -8,7 +8,7 @@
   </thead>
 
   <tbody>
-    <% @writers.each do |writer| %>
+    <% @writers.ordered_by_name.each do |writer| %>
         <tr>
         <td style="text-align:center"><%= writer.name %></td>
         <td style="text-align:center">
@@ -27,12 +27,7 @@
 </table>
 
 <br>
-<h3>Writers in Alphabetical Order:</h3>
 
-<% @writers.ordered_by_name.each do |writer| %>
-    <%= writer.name %>
-    <br>
-<% end %>
 
 <br>
 <br>
