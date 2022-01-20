@@ -19,10 +19,11 @@
   }
 
   table, td {
-    border: 1px solid #ddd;
     border-collapse: collapse;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
     width: 800px;
-    padding: 8px;
+    padding: 15px 30px 15px 30px;
   }
   tr:nth-child(even){
     background-color: #ADD8E6;
@@ -37,3 +38,11 @@
     background-color: #4682B4;
     color: white;
   }
+
+ #align-left{
+  float: left;
+ }
+
+ #align-right{
+  float: right;
+}

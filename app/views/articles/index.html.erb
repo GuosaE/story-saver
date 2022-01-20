@@ -1,16 +1,9 @@
-<style type="text/css">
-  table, td, th {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 800px;
-    padding: 0 30px;
-  }
-</style>
 
-<div align="center"><h1><u>Articles</u></h1></div>
+<br>
+<div align="center"><h1>Articles</h1></div>
 
-<div align="left"><%= link_to 'Create New Article', new_article_path %></div> 
-<div align="right"><%= link_to 'Back to Home', home_index_path %></div>
+<div id="align-left"><%= link_to 'Create New Article', new_article_path %></div><div id="align-right"><%= link_to 'Back to Home', home_index_path %></div>
+<br>
 <br>
 <div align="center">
 <table>
@@ -24,7 +17,8 @@
       <th>Publication Date</th>
       <th>Content</th>
       <th>Source</th>
-      <th>Country</th>  
+      <th>Country</th>
+      <th>Options</th>  
       <th colspan="3"></th>
     </tr>
   </thead>
