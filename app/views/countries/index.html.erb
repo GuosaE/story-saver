@@ -1,10 +1,9 @@
 <br>
 <br>
-<div align="center"><%= link_to 'Back to Home', home_index_path %>
-<br>
+<div align="center"><nav id="countries-back-to-home-link"><%= link_to 'Back to Home', home_index_path %></nav>
 <br>
 
-<h2><u>Countries</u></h2>
+<h2 id="countries-header">Countries</h2>
 
 <% @countries.each do |country| %>
     <p><strong>Country:</strong> <%= country.name %></p>  

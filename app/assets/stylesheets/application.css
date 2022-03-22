@@ -15,7 +15,7 @@
  */
 
  body {
-    background-color: PaleTurquoise;
+    background-color: #f8f8ff;
   }
 
   table, td {
@@ -39,10 +39,114 @@
     color: white;
   }
 
+ #article-previews{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 5px 5px 5px;
+  opacity: 0.8;
+ }
+
+ #navigation-options{
+  background-color: white;
+  margin: auto;
+  width:10%;
+  height:55%;
+  border-radius:12px;
+  padding: 10px 10px 10px 10px;
+ }
+
+ #articles-header{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 5px 5px 5px;
+  opacity: 0.8;
+ }
+
+ #new-article-header{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 5px 5px 5px;
+ }
+
+ #articles-back-link{
+  background-color: white;
+  margin: auto;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 10px 5px 10px;
+ }
+
  #align-left{
   float: left;
+  background-color: white;
+  text-align: center;
+  width:8%;
+  height:15%;
+  border-radius:9px;
+  padding: 5px 0px 5px 0px;
  }
 
  #align-right{
   float: right;
+  background-color: white;
+  text-align: center;
+  width:7%;
+  height:15%;
+  border-radius:9px;
+  padding: 5px 0px 5px 0px;
+}
+
+#notes-header{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 10px 5px 10px;
+}
+
+#new-note-link{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 10px 5px 10px;
+}
+
+#new-note-header{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 10px 5px 10px;
+}
+
+#notes-back-link{
+  background-color: white;
+  width:5%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 5px 5px 5px;
+}
+
+#countries-header{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 5px 5px 5px;
+}
+
+#countries-back-to-home-link{
+  background-color: white;
+  width:10%;
+  height:15%;
+  border-radius:12px;
+  padding: 5px 5px 5px 5px;
 }
