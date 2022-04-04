@@ -12,55 +12,55 @@
     <% end %>
   
     <div class="field">
-      <%= form.label :Source %>
-      <%= form.text_field :source_name %>
+      <%= form.label :"Source:" %>
+      &nbsp; <%= form.text_field :source_name %>
     </div>
     <br>
   
     <div class="field">
-      <%= form.label :Author %>
-      <%= form.text_field :author %>
+      <%= form.label :"Author:" %>
+      &nbsp; <%= form.text_field :author %>
     </div>
     <br>
   
     <div class="field">
-      <%= form.label :Title %>
-      <%= form.text_field :title %>
+      <%= form.label :"Title:" %>
+      &nbsp; &nbsp; &nbsp; <%= form.text_field :title %>
     </div>
     <br>
   
     <div class="field">
-      <%= form.label :Description %>
+      <%= form.label :"Description:" %>
       <%= form.text_area :description, rows: 12, cols: 50 %>
     </div>
     <br>
   
     <div class="field">
-      <%= form.label :URL %>
-      <%= form.text_field :url %>
+      <%= form.label :"URL:" %>
+      &nbsp; &emsp; &nbsp; <%= form.text_field :url %>
     </div>
     <br>
   
     <div class="field">
-      <%= form.label :Image_URL %>
-      <%= form.text_field :urlToImage %>
+      <%= form.label :"Image:" %>
+      &nbsp; &nbsp; <%= form.text_field :urlToImage %>
     </div>
     <br>
   
     <div class="field">
-      <%= form.label :Publication_date %>
+      <%= form.label :"Publication_date:" %>
       <%= form.datetime_select :publishedAt %>
     </div>
     <br>
 
     <div class="field">
-    <%= form.label :Country %>
-    <%= form.text_field :country %>
+    <%= form.label :"Country:" %>
+    &nbsp; <%= form.text_field :country %>
     </div>
     <br>
   
     <div class="field">
-      <%= form.label :Content %>
+      <%= form.label :"Content:" %>
       <%= form.text_area :content, rows: 24, cols: 100 %>
     </div>
     <br>

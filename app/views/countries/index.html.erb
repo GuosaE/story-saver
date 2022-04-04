@@ -1,9 +1,9 @@
 <br>
 <br>
-<div align="center"><nav id="countries-back-to-home-link"><%= link_to 'Back to Home', home_index_path %></nav>
+<div align="center"><nav class="basic-link"><%= link_to 'Back to Home', home_index_path %></nav>
 <br>
 
-<h2 id="countries-header">Countries</h2>
+<h2 class="basic-header">Countries</h2>
 
 <% @countries.each do |country| %>
     <p><strong>Country:</strong> <%= country.name %></p>  
@@ -15,3 +15,5 @@
     <%= link_to 'Delete', country, method: :delete, data: { confirm: 'Are you sure you want to remove this country?' } %>
     <br>
 <% end %></div>
+
+<br>

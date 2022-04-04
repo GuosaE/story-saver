@@ -1,15 +1,16 @@
 <br>
-<div align="center"><h2>Region Details</h2>
+<div align="center"><h2 class="basic-header">Region Details</h2>
 
-<br>
 <p><%= @region.name %></p>
 
-<br>
-<%= link_to "Add New Country", new_region_country_path(@region) %>
 
-<h3>Countries:</h3>
+<%= link_to "Add New Country", new_region_country_path(@region) %>
+<br>
+<br>
+<h3 class="basic-header">Countries:</h3>
 <% @region.countries.each do |country| %>
     <p><%= country.name %></p>
 <% end %>
 
-<%= link_to 'Back to Regions', regions_path %></div> 
+<nav class="basic-link">
+<%= link_to 'Back to Regions', regions_path %></nav></div> 
