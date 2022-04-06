@@ -1,19 +1,22 @@
 <div align="center"><h2 class="basic-header">Country Details</h2>
 
+<section class="narrow-item-background">
 <p><strong>Name:</strong> <%= @country.name %></p>
 <p><strong>Region:</strong> <%= @country.region.name %></p>
+</section>
+
 <br>
 <p class="basic-header"><strong>Associated News Articles:</strong></p>
 <br>
+
+<section class="item-background">
 <% @articles.each do |article| %>
     <% if article.country_id == @country.id %>
         <p><strong>Title:</strong> <%= article.title %></p>
         <p><strong>URL:</strong> <%= link_to article.url, "#{article.url}" %></p>
         <br>
-        <br>
-        <br>
     <% end %>
-<% end %>
+<% end %></section>
 
 <br>
 <nav id="country-edit-link">

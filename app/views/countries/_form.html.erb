@@ -1,4 +1,4 @@
-<div align="center"><%= form_with(model: country, local: true) do |form| %>
+<div align="center" class="narrow-input-background"><%= form_with(model: country, local: true) do |form| %>
     <% if country.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(country.errors.count, "error") %> prohibited this country from being saved:</h2>
@@ -30,4 +30,4 @@
     <div class="actions">
       <%= form.submit %>
     </div>
-<% end %>
+<% end %></div>

@@ -5,7 +5,8 @@
 
 <h2 class="basic-header">Countries</h2>
 
-<% @countries.each do |country| %>
+<br>
+<section class="item-background"><% @countries.each do |country| %>
     <p><strong>Country:</strong> <%= country.name %></p>  
     <p><strong>Region:</strong> <%= country.region.name %></p>
     <%= link_to 'Show', region_country_path(country.region, country) %>
@@ -14,6 +15,6 @@
     <br>
     <%= link_to 'Delete', country, method: :delete, data: { confirm: 'Are you sure you want to remove this country?' } %>
     <br>
-<% end %></div>
+<% end %></section></div>
 
 <br>
