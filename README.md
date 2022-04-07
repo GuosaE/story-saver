@@ -1,4 +1,7 @@
 # Story Saver
+
+![](story-saver-demo.gif)
+
 A Rails application for saving and organizing news stories and making notes about stories that users have read or plan to read.  
 
 # Installation
