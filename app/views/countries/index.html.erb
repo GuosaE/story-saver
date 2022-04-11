@@ -7,7 +7,7 @@
 
 <br>
 <section class="item-background"><% @countries.each do |country| %>
-    <p><strong>Country:</strong> <%= country.name %></p>  
+    <p><strong>Country:</strong> <%= country.name %></p>    
     <p><strong>Region:</strong> <%= country.region.name %></p>
     <%= link_to 'Show', region_country_path(country.region, country) %>
     <br>
@@ -17,4 +17,3 @@
     <br>
 <% end %></section></div>
 
-<br>

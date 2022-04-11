@@ -6,36 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-# populate the database with writers, sources, and articles:
-
-# require 'rest-client'
-
-# url = RestClient.get 'https://newsapi.org/v2/everything?q=markets&apiKey=41c22b6d8c124eedb1f0677402de89a1'
-
-# url_array = JSON.parse(url)["articles"]
-
-# url_array.each do |article|
-#     Writer.create(name: article["author"])
-# end
-
-# url_array.each do |article|
-#     Source.create(name: article["source"]["name"])
-# end
-
-# url_array.each_with_index do |article, index|
-#     Article.create(source_name: article["source"]["name"],
-#     author: article["author"],
-#     title: article["title"],
-#     description: article["description"],
-#     url: article["url"],
-#     urlToImage: article["urlToImage"],
-#     publishedAt: article["publishedAt"],
-#     content: article["content"],
-#     writer_id: index + 1,
-#     source_id: index + 1,
-#     country_id: index + 1)
-# end
+# Populate the database with notes, countries, writers, sources, and articles:
 
 # Create Subjects:
 
@@ -62,8 +33,8 @@ Category.create(name: "Skepticism")
 
 # Create Notes:
 
-Note.create(name: "Speculation about a market trend based on a story", information: "The stock's going up", subject_id: 3, category_id: 6)
-Note.create(name: "Analysis of some finance gurus in the news", information: "I definitely believe them.", subject_id: 7, category_id: 8)
+Note.create(name: "Speculation about a market trend based on a story", information: "The stock's going up.", subject_id: 3, category_id: 6)
+Note.create(name: "Analysis of some finance gurus in the news", information: "I definitely believe them. I'm not skeptical of their claims at all.", subject_id: 7, category_id: 8)
 Note.create(name: "I just really like that particular bank", information: "I really like them.", subject_id: 6, category_id: 1)
 
 # Create Regions:
@@ -74,7 +45,7 @@ Region.create(name: "Asia")
 Region.create(name: "Europe")
 Region.create(name: "Oceania")
 
-# Create countries:
+# Create Countries:
 
 Country.create(name: "Algeria", region_id: 1)	
 Country.create(name: "Angola", region_id: 1)
@@ -306,43 +277,190 @@ Country.create(name: "Gibraltar", region_id: 4)
 
 
 Country.create(name: "Australia", region_id: 5)
-Country.create(name: "Papua New Guinea", region_id: 5)
-Country.create(name: "New Zealand", region_id: 5)
 Country.create(name: "Fiji", region_id: 5)
-Country.create(name: "Solomon Islands", region_id: 5)
-Country.create(name: "Micronesia", region_id: 5)
-Country.create(name: "Vanuatu", region_id: 5)
-Country.create(name: "Samoa", region_id: 5)
 Country.create(name: "Kiribati", region_id: 5)
-Country.create(name: "Tonga", region_id: 5)
 Country.create(name: "Marshall Islands", region_id: 5)
-Country.create(name: "Palau", region_id: 5)
-Country.create(name: "Tuvalu", region_id: 5)
+Country.create(name: "Micronesia", region_id: 5)
 Country.create(name: "Nauru", region_id: 5)
+Country.create(name: "New Zealand", region_id: 5)
+Country.create(name: "Palau", region_id: 5)
+Country.create(name: "Papua New Guinea", region_id: 5)
+Country.create(name: "Samoa", region_id: 5)
+Country.create(name: "Solomon Islands", region_id: 5)
+Country.create(name: "Tonga", region_id: 5)
+Country.create(name: "Tuvalu", region_id: 5)
+Country.create(name: "Vanuatu", region_id: 5)
 
-Country.create(name: "New Caledonia", region_id: 5)
-Country.create(name: "French Polynesia", region_id: 5)
-Country.create(name: "Guam", region_id: 5)
-Country.create(name: "Northern Mariana Islands", region_id: 5)
 Country.create(name: "American Samoa", region_id: 5)
 Country.create(name: "Cook Islands", region_id: 5)
-Country.create(name: "Wallis and Futuna", region_id: 5)
+Country.create(name: "French Polynesia", region_id: 5)
+Country.create(name: "Guam", region_id: 5)
+Country.create(name: "New Caledonia", region_id: 5)
 Country.create(name: "Niue", region_id: 5)
+Country.create(name: "Northern Mariana Islands", region_id: 5)
 Country.create(name: "Tokelau", region_id: 5)
+Country.create(name: "Wallis and Futuna", region_id: 5)
 
+# Create Writers:
 
-# Create articles:
+Writer.create(name: "Karen Weise")
+Writer.create(name: "Rob Lenihan")
+Writer.create(name: "Al Jazeera")
+Writer.create(name: "Mostafa Rachwani")
+Writer.create(name: "David Wu")
+Writer.create(name: "Jinpu Wang")
+Writer.create(name: "Shi Jiangtao")
+Writer.create(name: "Patricia Kowsmann")
+Writer.create(name: "John Leicester and Thomas Adamson")
+Writer.create(name: "Emma Roth")
 
-# url_array.each_with_index do |article, index|
-#     Article.create(source_name: article["source"]["name"],
-#     author: article["author"],
-#     title: article["title"],
-#     description: article["description"],
-#     url: article["url"],
-#     urlToImage: article["urlToImage"],
-#     publishedAt: article["publishedAt"],
-#     content: article["content"],
-#     writer_id: index + 1,
-#     source_id: index + 1,
-#     country_id: index + 1)
-# end
+# Create Sources:
+
+Source.create(name: "The New York Times")
+Source.create(name: "TheStreet")
+Source.create(name: "Al Jazeera")
+Source.create(name: "The Guardian")
+Source.create(name: "Sky News Australia")
+Source.create(name: "The Conversation")
+Source.create(name: "South China Morning Post")
+Source.create(name: "The Wall Street Journal")
+Source.create(name: "The Associated Press")
+Source.create(name: "The Verge")
+
+# Create Articles:
+
+Article.create(source_name: "The New York Times",
+    author: "Karen Weise",
+    title: "Amazon, Labor Organizers File Objections to Alabama Union Vote - The New York Times",
+    description: "The company listed a series of complaints against an upstart union’s organizing efforts. 
+    Both Amazon and another union noted objections to another vote in Alabama.",
+    url: "https://www.nytimes.com/2022/04/08/business/amazon-alabama-union-vote-objections.html",
+    urlToImage: "https://static01.nyt.com/images/2022/04/08/business/08Amazon-labor-sub/08Amazon-labor-sub-facebookJumbo.jpg",
+    publishedAt: "2022-04-10T02:17:00Z",
+    content: "Amazon said the agency had erred in the operations for the election, 
+    including not having enough staff on hand to manage voting, which the company said had",
+    writer_id: 1,
+    source_id: 1,
+    country_id: 93)
+
+Article.create(source_name: "TheStreet",
+    author: "Rob Lenihan",
+    title: "Facebook Suffers a Big Setback - TheStreet",
+    description: "The ambitions of the social network in the metaverse are shaken up.",
+    url: "https://www.thestreet.com/technology/facebook-and-mark-zuckerberg-face-a-major-challenge",
+    urlToImage: "https://www.thestreet.com/.image/t_share/MTczNjU5MTMwNDc1NTg3NTU4/mark-zuckerberg_3.jpg",
+    publishedAt: "2022-04-10T00:07:32Z",
+    content: "In 1992 novel 'Snow Crash', author Neal Stephenson coined a term to describe a place 
+    where human avatars interact with each other. That term was 'metaverse'",
+    writer_id: 2,
+    source_id: 2,
+    country_id: 93)
+
+Article.create(source_name: "Al Jazeera",
+    author: "Al Jazeera",
+    title: "‘Absurd’: Brazil awards Bolsonaro ‘medal of Indigenous merit’",
+    description: "Indigenous leaders slam the award, saying Brazil’s president has promoted policies that threaten their communities.",
+    url: "https://www.aljazeera.com/news/2022/3/16/absurd-brazil-awards-bolsonaro-medal-of-indigenous-merit",
+    urlToImage: "https://www.aljazeera.com/wp-content/uploads/2022/03/2022-03-08T185907Z_1289752352_RC2DYS9GRK7Q_RTRMADP_3_BRAZIL-INDIGENOUS.jpg?resize=770%2C513",
+    publishedAt: "2022-03-16T01:03:21Z",
+    content: "Brazil’s justice ministry has awarded President Jair Bolsonaro the nation’s 
+    “medal of Indigenous merit”, drawing sharp criticism from Indigenous leaders",
+    writer_id: 3,
+    source_id: 3,
+    country_id: 66)
+
+Article.create(source_name: "The Guardian",
+    author: "Mostafa Rachwani",
+    title: "Ceramic cockerels surprise Boris Johnson and Volodymyr Zelenskiy on Kyiv walk",
+    description: "‘I’m from London’ says British PM. ‘I know, I’m from Kharkiv,’ says bystander proffering 
+    traditional jugs that in the war have come to symbolise Ukrainian resilience",
+    url: "https://www.theguardian.com/world/2022/apr/10/ceramic-cockerels-surprise-boris-johnson-and-volodymyr-zelenskiy-on-kyiv-walk",
+    urlToImage: "https://i.guim.co.uk/img/media/50b6d5c02a1ff3fdb70ea2e79a8ec074f639e273/560_345_1849_1110/master/1849.jpg?width=700&quality=85&auto=format&fit=max&s=5d79056812db1f067c43e5f510f91393",
+    publishedAt: "2022-04-10T23:53:00Z",
+    content: "When a single ceramic cockerel, sitting atop a kitchen cabinet, survived a bombardment of Borodianka, 
+    it became a symbol of Ukrainian resistance",
+    writer_id: 4,
+    source_id: 4,
+    country_id: 204)
+
+Article.create(source_name: "Sky News Australia",
+    author: "David Wu",
+    title: "Fireproof Australia protesters cause traffic chaos as they defy warnings to rally on The Grand Parade at Brighton-Le-Sands",
+    description: "Four climate change demonstrators brought traffic to a standstill in Sydney as they protested 
+    on a main thoroughfare leading to one of the state's busiest ports.",
+    url: "https://www.skynews.com.au/australia-news/fireproof-australia-protesters-cause-traffic-chaos-as-they-defy-warnings-to-rally-on-the-grand-parade-at-brightonlesands/news-story/77f4ad6ce4750ebb77ed673e51b99d04",
+    urlToImage: "https://content.api.news/v3/images/bin/645200ecffe1f3c43cc9175df5b29432",
+    publishedAt: "2022-04-05T20:15:00Z",
+    content: "A handful of climate change demonstrators have defied repeated warnings from the government
+     and police to protest on a busy thoroughfare in Sydney",
+    writer_id: 5,
+    source_id: 5,
+    country_id: 210)
+
+Article.create(source_name: "The Conversation",
+    author: "Jinpu Wang",
+    title: "What drives Chinese migrants to Ghana: it’s not just an economic decision",
+    description: "Ghana is a popular destination for Chinese migrants",
+    url: "https://theconversation.com/what-drives-chinese-migrants-to-ghana-its-not-just-an-economic-decision-177580",
+    urlToImage: "https://images.theconversation.com/files/455511/original/file-20220331-23-v46ioh.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip",
+    publishedAt: "2022-04-07T09:06:00Z",
+    content: "Over the past two decades, there have been many debates about China’s growing engagement in Africa. In these discussions, 
+    the more than one million Chinese expatriates",
+    writer_id: 6,
+    source_id: 6,
+    country_id: 23)
+
+Article.create(source_name: "South China Morning Post",
+    author: "Shi Jiangtao",
+    title: "In lead-up to Philippine election, Beijing warns Manila to avoid ‘disturbances’ upsetting its China policy",
+    description: "During meeting of foreign ministers, China’s Wang Yi says it is crucial their relations are not 
+    damaged for the sake of stability in the South China Sea",
+    url: "https://www.scmp.com/news/china/diplomacy/article/3173038/lead-philippine-election-beijing-warns-manila-avoid",
+    urlToImage: "https://img.i-scmp.com/cdn-cgi/image/fit=contain,width=1098,format=auto/sites/default/files/styles/1200x800/public/d8/images/canvas/2022/04/04/1303e463-22a3-479a-b77d-b29689d63d81_8bb08248.jpg?itok=KHmKj6ws&v=1649069988",
+    publishedAt: "2022-04-04T20:30:00Z",
+    content: "China’s Foreign Minister Wang Yi has urged Manila to steer clear of external “disturbances” to its China 
+    policy and prevent tension arising from their South China Sea dispute",
+    writer_id: 7,
+    source_id: 7,
+    country_id: 119)
+
+Article.create(source_name: "The Wall Street Journal",
+    author: "Patricia Kowsmann",
+    title: "New Sanctions Add Pressure on Russia but Don’t Shut Off Business - The Wall Street Journal",
+    description: "Waves of Western sanctions targeting Russian banks are hampering the country’s ability to conduct business, 
+    but efforts continue to be constrained",
+    url: "https://www.wsj.com/articles/new-sanctions-add-pressure-on-russia-but-dont-shut-off-business-11649414051",
+    urlToImage: "https://images.wsj.net/im-520961/social",
+    publishedAt: "2022-04-08T10:34:00Z",
+    content: "Waves of Western sanctions targeting Russian banks are hampering the countrys ability to conduct business, but 
+    efforts continue to be constrained by",
+    writer_id: 8,
+    source_id: 8,
+    country_id: 196)
+
+Article.create(source_name: "The Associated Press",
+    author: "John Leicester and Thomas Adamson",
+    title: "French polls: Macron, far-right rival Le Pen face runoff",
+    description: "French polling agencies projected Sunday that incumbent Emmanuel Macron and far-right nationalist 
+    Marine Le Pen are heading for another winner-takes-all runoff",
+    url: "https://apnews.com/article/marine-le-pen-macron-jean-luc-melenchon-france-europe-135cdf98d3d09985e584a1da79c9f704",
+    urlToImage: "https://storage.googleapis.com/afs-prod/media/f7d4b25aeeea46fca8a10d2d1c3a36c2/1000.jpeg",
+    publishedAt: "2022-04-10T14:15:00Z",
+    content: "French polling agencies projected Sunday that incumbent Emmanuel Macron and far-right 
+    nationalist Marine Le Pen are heading for another winner-takes-all runoff",
+    writer_id: 9,
+    source_id: 9,
+    country_id: 174)
+
+Article.create(source_name: "The Verge",
+    author: "Emma Roth",
+    title: "Here's what happens when cops pull over a driverless Cruise vehicle - The Verge",
+    description: "After police pulled over a driverless Cruise vehicle in San Francisco, the car drove off to park in a safer 
+    location.",
+    url: "https://www.theverge.com/2022/4/10/23019303/heres-what-happens-cops-pull-over-a-driverless-cruise-vehicle-general-motors",
+    urlToImage: "https://cdn.vox-cdn.com/thumbor/df-De7cOxxv7MqimPhSJyNd7Yag=/0x269:3852x2286/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23380415/1189070710.jpg",
+    publishedAt: "2022-04-10T21:07:25Z",
+    content: "In case you were wondering police pulled over the Cruise vehicle for not having its headlights on.",
+    writer_id: 10,
+    source_id: 10,
+    country_id: 93)
