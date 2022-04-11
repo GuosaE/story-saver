@@ -460,7 +460,8 @@ Article.create(source_name: "The Verge",
     url: "https://www.theverge.com/2022/4/10/23019303/heres-what-happens-cops-pull-over-a-driverless-cruise-vehicle-general-motors",
     urlToImage: "https://cdn.vox-cdn.com/thumbor/df-De7cOxxv7MqimPhSJyNd7Yag=/0x269:3852x2286/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/23380415/1189070710.jpg",
     publishedAt: "2022-04-10T21:07:25Z",
-    content: "In case you were wondering police pulled over the Cruise vehicle for not having its headlights on.",
+    content: "It’s been a little over two months since Cruise started letting the people of San Francisco catch rides on its 
+    driverless robotaxis, and one of its cars already had a run-in with police",
     writer_id: 10,
     source_id: 10,
     country_id: 93)
